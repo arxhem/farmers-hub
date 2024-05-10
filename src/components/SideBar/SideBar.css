@@ -1,0 +1,140 @@
+:root {
+  --PrimaryC: hsl(94,59%,35%);
+  --HoverC: #bdf094;
+  --paleGreen:hsl(96,75%,80%);
+  --whiteC: hsl(0,0%,100%);
+  --blackC:hsl(0,0%,18%);
+  --bgColor:hsl(220,10%,94%);
+  --textColor:hsl(240,1%,50%);
+  --greyText:rgb(190,190,190);
+  --inputC: hsl(330,12%,97%);
+  --biggest:2.5rem;
+  --h1F:2rem;
+  --h2F:1.5rem;
+  --h3F:1.25rem;
+  --normalF:.938rem;
+  --smallF: .813rem;
+  --smallesF: .75rem;
+}
+
+.sideBar {
+  box-shadow: 1px 0px 4px var(--greyText);
+  background: var(--whiteC);
+  width: 19%;
+  height: 100%;
+  gap: 3rem;
+  overflow: auto;
+}
+.sideBar .logoDiv {
+  padding: 2rem 2rem 0;
+  cursor: pointer;
+}
+.sideBar .logoDiv img {
+  max-width: 25px;
+  margin-right: 0.5rem;
+  background: var(--inputC);
+  border-radius: 2px;
+  padding: 0.2rem;
+}
+.sideBar .logoDiv h2 {
+  font-size: var(--h2F);
+  color: var(--PrimaryC);
+}
+.sideBar .menuDiv .divTitle, .sideBar .settingsDiv .divTitle {
+  font-size: var(--h3F);
+  color: var(--blackC);
+  padding: -1.5rem 1.5rem;
+}
+.sideBar .menuDiv .menuList .listItem, .sideBar .settingsDiv .menuList .listItem {
+  padding: 0.2rem 1.5rem;
+  width: 100%;
+  position: relative;
+}
+.sideBar .menuDiv .menuList .listItem::before, .sideBar .settingsDiv .menuList .listItem::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 5px;
+  bottom: 0;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: var(--PrimaryC);
+}
+.sideBar .menuDiv .menuList .listItem .menuLink, .sideBar .settingsDiv .menuList .listItem .menuLink {
+  color: var(--greyText);
+  font-weight: 500;
+  transition: 0;
+}
+.sideBar .menuDiv .menuList .listItem .menuLink .icon, .sideBar .settingsDiv .menuList .listItem .menuLink .icon {
+  margin-right: 0.5rem;
+}
+.sideBar .menuDiv .menuList .listItem:hover .menuLink, .sideBar .settingsDiv .menuList .listItem:hover .menuLink {
+  color: var(--PrimaryC);
+  transition: 0;
+}
+.sideBar .menuDiv .menuList .listItem:hover ::before, .sideBar .settingsDiv .menuList .listItem:hover ::before {
+  height: 100%;
+  transition: 0.3s ease;
+}
+.sideBar .sideBarCard {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+.sideBar .sideBarCard .icon {
+  position: absolute;
+  background: var(--HoverC);
+  border: 10px solid var(--whiteC);
+  border-radius: 50%;
+  top: -8px;
+  right: 50%;
+  font-size: 3rem;
+  transform: translate(50%);
+  z-index: 100;
+}
+.sideBar .sideBarCard .cardContent {
+  position: relative;
+  padding: 1rem;
+  background: var(--HoverC);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.sideBar .sideBarCard .cardContent h3 {
+  font-size: var(--h3F);
+  margin-top: 1rem;
+  padding: 1rem 0;
+  font-weight: 800;
+  color: var(--blackC);
+}
+.sideBar .sideBarCard .cardContent p {
+  font-size: var(--normalF);
+  color: var(--textColor);
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+.sideBar .sideBarCard .cardContent .btn {
+  position: relative;
+  color: var(--textColor);
+  z-index: 1000;
+}
+.sideBar .sideBarCard .cardContent .circle1, .sideBar .sideBarCard .cardContent .circle2 {
+  position: absolute;
+  background: var(--paleGreen);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.sideBar .sideBarCard .cardContent .circle1 {
+  height: 150px;
+  width: 150px;
+  top: -50px;
+  left: -50px;
+}
+.sideBar .sideBarCard .cardContent .circle2 {
+  height: 150px;
+  width: 150px;
+  bottom: -80px;
+  right: -70px;
+  z-index: 1;
+}/*# sourceMappingURL=SideBar.css.map */

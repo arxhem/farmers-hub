@@ -1,0 +1,155 @@
+:root{
+    --PrimaryC: hsl(94,59%,35%);
+    --HoverC: #bdf094;
+    --paleGreen:hsl(96,75%,80%);
+    --whiteC: hsl(0,0%,100%);
+    --blackC:hsl(0,0%,18%);
+    --bgColor:hsl(220,10%,94%);
+    --textColor:hsl(240,1%,50%);
+    --greyText:rgb(190,190,190);
+    --inputC: hsl(330,12%,97%);
+
+    --biggest:2.5rem;
+    --h1F:2rem;
+    --h2F:1.5rem;
+    --h3F:1.25rem;
+    --normalF:.938rem;
+    --smallF: .813rem;
+    --smallesF: .75rem;
+}
+
+.sideBar{
+    box-shadow:1px 0px 4px var(--greyText);
+    background: var(--whiteC) ;
+    width: 19%;
+    height: 100%;
+    gap: 3rem;
+    overflow: auto;
+
+    .logoDiv{
+        padding:2rem 2rem 0 ;
+        cursor: pointer;
+
+    
+    img{
+        max-width: 25px;
+        margin-right: .5rem;
+        background: var(--inputC);
+        border-radius: 2px;
+        padding: .2rem;
+    }
+    h2{
+        font-size: var(--h2F);
+        color: var(--PrimaryC);
+
+    }
+}
+.menuDiv, .settingsDiv{
+    .divTitle{
+        font-size:var(--h3F);
+    color:var(--blackC);
+    padding: - 1.5rem 1.5rem;
+    }
+    .menuList{
+        .listItem{
+            padding: .2rem 1.5rem;
+            width: 100%;
+            position:relative;
+            &::before{
+                
+                content:'';
+                position: absolute;
+                height: 100%;
+                left:0;
+                width:5px;
+                bottom:0;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                background: var(--PrimaryC);                
+            }
+
+            .menuLink{
+                color: var(--greyText);
+                font-weight: 500;
+                transition: 0;
+
+                .icon{
+                    margin-right:.5rem;
+                }
+            }
+            &:hover .menuLink{
+                color: var(--PrimaryC);
+                transition: 0;
+            }
+            &:hover ::before{
+                height: 100%;
+                transition: .3s ease;
+            }
+
+        }
+    }
+}
+.sideBarCard{
+    width: 100%;
+    padding :1rem;
+    text-align: center;
+position: relative;
+    .icon{
+        position: absolute;
+        background: var(--HoverC);
+        border: 10px solid var(--whiteC);
+        border-radius: 50%;
+        top: -8px;
+        right: 50%;
+        font-size: 3rem;
+        transform: translate(50%);
+        z-index: 100;
+    }
+    .cardContent{
+        position: relative;
+        padding:1rem;
+        background: var(--HoverC);
+        border-radius: 10px;
+        overflow: hidden;
+
+        h3{
+            font-size:var(--h3F);
+            margin-top: 1rem;
+            padding:1rem 0;
+            font-weight: 800;
+            color:var(--blackC);
+        }
+        p{
+            font-size:var(--normalF);
+            color: var(--textColor);
+            padding-bottom: 1rem;
+            font-weight: 500;
+        }
+        .btn{
+            position:relative;
+            color: var(--textColor);
+            z-index:1000;
+        }
+        .circle1, .circle2{
+            position: absolute;
+            background: var(--paleGreen);
+            border-radius: 50%;
+            opacity: .7;
+        }
+        .circle1{
+            height: 150px;
+            width: 150px;
+            top:-50px;
+            left:-50px;
+        }
+        .circle2{
+            height: 150px;
+            width: 150px;
+            bottom:-80px;
+            right:-70px;
+            z-index: 1;
+        }
+        
+    }
+;}
+}
